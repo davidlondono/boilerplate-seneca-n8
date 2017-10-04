@@ -1,0 +1,28 @@
+{
+  "name": "boilerplate-seneca-n8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines" : { "node" : ">=8.5" },
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidlondono/boilerplate-seneca-n8.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidlondono/boilerplate-seneca-n8/issues"
+  },
+  "homepage": "https://github.com/davidlondono/boilerplate-seneca-n8#readme",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "dotenv": "^4.0.0",
+    "eslint": "^4.8.0",
+    "lodash": "^4.17.4",
+    "seneca": "^3.4.2"
+  }
+}
