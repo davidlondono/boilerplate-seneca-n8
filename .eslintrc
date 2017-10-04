@@ -1,0 +1,29 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb-base",
+    "plugin:flowtype/recommended"
+  ],
+  "env": {
+    "node": true
+  },
+  "plugins": [
+    "flowtype"
+  ],
+  "rules": {
+    "import/prefer-default-export":0,
+    "no-underscore-dangle": 0,
+    "no-param-reassign": [
+      "error",
+      {
+        "props": false
+      }
+    ],
+    "new-cap": [
+      "error",
+      {
+        "properties": false
+      }
+    ]
+  }
+  }
