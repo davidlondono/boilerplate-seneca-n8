@@ -1,11 +1,7 @@
-import prefix from './environment';
+const prefix = require('./environment');
 
-export default {
+module.exports = {
   type: 'amqp',
-  hostname: process.env[`${prefix}AMQP_HOST`],
-  port: process.env[`${prefix}AMQP_PORT`],
-  vhost: process.env[`${prefix}AMQP_VHOST`] || '/',
-  username: process.env[`${prefix}AMQP_USERNAME`],
-  password: process.env[`${prefix}AMQP_PASSWORD`],
-  name: process.env[`${prefix}AMQP_NAME`],
+  url: process.env[`${prefix}AMQP_URL`],
+  name: process.env[`${prefix}SENECA_NAME`],
 };

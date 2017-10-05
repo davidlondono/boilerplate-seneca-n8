@@ -1,1 +1,5 @@
-export { default as MathInterface } from './Math';
+const MathInterface = require('./Math');
+
+module.exports = {
+  MathInterface,
+};

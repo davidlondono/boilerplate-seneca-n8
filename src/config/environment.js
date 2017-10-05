@@ -1,9 +1,10 @@
-import dotenv from 'dotenv';
+const dotenv = require('dotenv');
 
 let environment;
 let path;
 const env = '.env';
-const service = process.env.SERVICE || 'auth';
+const service = process.env.SERVICE;
+const platform = process.env.PLATFORM;
 
 switch (process.env.NODE_ENV) {
   case 'develop':
@@ -15,10 +16,10 @@ switch (process.env.NODE_ENV) {
     path = `/src/${env}`;
     break;
   default:
-    environment = 'TEST_';
-    path = `${process.env.HOME}/.qcams.${service}${env}`;
+    environment = '';
+    path = '.env.test';
     break;
 }
 dotenv.config({ path });
 const prefix = environment;
-export default prefix;
+module.exports = prefix;

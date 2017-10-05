@@ -8,9 +8,7 @@
   },
   "private": true,
   "scripts": {
-    "start": "node lib",
-    "dev": "babel-node src",
-    "build": "babel src/ -d lib/",
+    "start": "node src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -32,13 +30,8 @@
     "winston": "^3.0.0-rc0"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-eslint": "^8.0.1",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-flow": "^6.23.0",
     "eslint": "^4.8.0",
     "eslint-config-airbnb-base": "^12.0.1",
-    "eslint-plugin-flowtype": "^2.37.0",
     "eslint-plugin-import": "^2.7.0"
   }
 }

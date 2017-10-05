@@ -1,5 +1,5 @@
-import logger from './logger';
-import server from './server';
+const logger = require('./logger');
+const server = require('./server');
 
 
 server.start().then(() => {
