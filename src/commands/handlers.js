@@ -10,6 +10,14 @@ const handlers = [
     },
   },
   {
+    pattern: 'math:sumInternal',
+    handler: async (msg, resolve) => {
+      const { a, b } = msg;
+      const response = await MathInterface.sumInternal(a, b);
+      resolve(response);
+    },
+  },
+  {
     pattern: 'math:times',
     handler: async (msg, resolve) => {
       const { a, b } = msg;

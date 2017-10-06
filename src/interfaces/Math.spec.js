@@ -1,6 +1,5 @@
 
 const Math = require('./Math');
-const Promise = require('bluebird');
 const test = require('ava');
 
 test((t) => {

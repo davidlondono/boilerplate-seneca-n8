@@ -1,16 +1,19 @@
 const seneca = require('seneca');
 const Commands = require('./commands');
 const logger = require('./logger');
-const senecaConfig = require('./config/seneca');
-
+const amqpConfig = require('./config/amqp');
 
 const start = () => {
+  // get plugin with interfaces
   const commands = Commands.start();
-  senecaConfig.pin = commands.pins;
+  amqpConfig.pin = commands.pins;
+
+  // create listener
   const listener = seneca()
     .use('seneca-amqp-transport')
     .use(commands.plugin)
-    .listen(senecaConfig);
+    .listen(amqpConfig);
+
   // start server
   return new Promise((fulfill) => {
     listener.ready((e) => {
