@@ -7,11 +7,11 @@ const env = '.env';
 switch (process.env.NODE_ENV) {
   case 'develop':
     environment = 'DEV_';
-    path = `/src/${env}`;
+    path = `${env}`;
     break;
   case 'production':
     environment = '';
-    path = `/src/${env}`;
+    path = `${env}`;
     break;
   default:
     environment = '';

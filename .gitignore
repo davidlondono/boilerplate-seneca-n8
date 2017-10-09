@@ -63,3 +63,4 @@ combined.log
 .idea/*
 .idea_modules/*
 
+.env.test
