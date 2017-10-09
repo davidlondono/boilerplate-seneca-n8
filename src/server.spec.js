@@ -78,6 +78,6 @@ test('make internal sum', async (t) => {
 
 test('make benchmark internal sum', async (t) => {
   // t.plan(1);
-  await repeatBench('double sum', 1, () => act('math:sum', { a: 1, b: 5 }));
+  await repeatBench('double sum', 10000, () => act('math:sum', { a: 1, b: 5 }));
   t.pass();
 });
