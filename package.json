@@ -12,16 +12,6 @@
     "test": "ava",
     "fix": "eslint fix"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/davidlondono/boilerplate-seneca-n8.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/davidlondono/boilerplate-seneca-n8/issues"
-  },
-  "homepage": "https://github.com/davidlondono/boilerplate-seneca-n8#readme",
   "dependencies": {
     "bluebird": "^3.5.1",
     "dotenv": "^4.0.0",
