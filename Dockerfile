@@ -12,10 +12,10 @@ WORKDIR /usr/src/app
 
 COPY src /usr/src/app/src
 COPY package.json /usr/src/app
-COPY .env.test /usr/src/app
+COPY .env /usr/src/app
 
 RUN npm install
 
-ENV NODE_ENV test
+ENV NODE_ENV production
 
 ENTRYPOINT ["npm", "start"]
