@@ -11,7 +11,7 @@ const start = () => _.reduce(services, (publisher, service) => {
   const amqpConfig = _.clone(AMQP_CONFIG);
 
   // custom config with service parameters
-  const { name, pin } = service;
+  const { name, pin, alias } = service;
   amqpConfig.name = name.toLowerCase();
   amqpConfig.pin = pin;
 
@@ -32,7 +32,7 @@ const start = () => _.reduce(services, (publisher, service) => {
     return t;
   }, {});
   // add commands on to the service name
-  publisher[name] = commands;
+  publisher[alias || name] = commands;
   return publisher;
 }, {});
 
