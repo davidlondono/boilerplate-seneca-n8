@@ -19,8 +19,7 @@
     "pino": "^4.7.2",
     "proxyrequire": "^1.0.15",
     "seneca": "^3.4.2",
-    "seneca-amqp-transport": "^2.2.0",
-    "winston": "^3.0.0-rc0"
+    "seneca-amqp-transport": "^2.2.0"
   },
   "devDependencies": {
     "@types/node": "^8.0.32",
