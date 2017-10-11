@@ -4,7 +4,7 @@ const handlers = require('./handlers');
 
 const errorParser = response => (err) => {
   if (err.business === true) {
-    return response({ error: err.message, ok: false });
+    return response(null, { error: err.message, ok: false });
   }
   return response(err);
 };
