@@ -18,7 +18,7 @@ const repeatBench = (name, times, callback) => {
     .then((o) => {
       console.timeEnd(name);
       return o;
-    }, { concurrency: 1 });
+    }, { concurrency: 50 });
 };
 
 
@@ -26,7 +26,7 @@ listener.actAsync = Promise.promisify(listener.act);
 const act = Promise.promisify(listener.act, { context: listener });
 
 
-// test.before(() => server.start());
+test.before(() => server.start());
 
 test.cb('make a sum', (t) => {
   listener.act({ math: 'sum', a: 1, b: 5 }, (e, msg) => {
@@ -76,8 +76,8 @@ test('make internal sum', async (t) => {
 });
 
 
-test('make benchmark internal sum', async (t) => {
+test.only('make benchmark internal sum', async (t) => {
   // t.plan(1);
-  await repeatBench('double sum', 1, () => act('math:sum', { a: 1, b: 5 }));
+  await repeatBench('double sum', 1000, () => act('math:sum', { a: 1, b: 5 }));
   t.pass();
 });
