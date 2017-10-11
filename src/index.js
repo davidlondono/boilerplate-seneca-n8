@@ -1,3 +1,4 @@
+global.Promise = require('bluebird');
 const logger = require('./logger');
 const server = require('./server');
 
